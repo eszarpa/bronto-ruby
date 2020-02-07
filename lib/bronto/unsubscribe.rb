@@ -9,13 +9,8 @@ module Bronto
       api_key = api_key || self.api_key
 
       resp = request(:read, body)
-
       Array.wrap(resp[:return])
     end
-
-    # def to_hash
-    #   { contact_id: contact_id }
-    # end
 
     def initialize(options = {})
       super(options)
